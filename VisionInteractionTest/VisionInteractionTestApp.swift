@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import MainFeature
 
 @main
 struct VisionInteractionTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
