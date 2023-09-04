@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MainFeature
+import ImmersiveFeature
 
 @main
 struct VisionInteractionTestApp: App {

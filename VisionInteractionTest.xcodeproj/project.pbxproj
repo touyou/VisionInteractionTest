@@ -11,16 +11,15 @@
 		2C6C77E42AA5DB4F00FF7F21 /* Store in Frameworks */ = {isa = PBXBuildFile; productRef = 2C6C77E32AA5DB4F00FF7F21 /* Store */; };
 		2CB60CD72AA59FA300600B0D /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB60CD62AA59FA300600B0D /* RealityKitContent */; };
 		2CB60CD92AA59FA300600B0D /* VisionInteractionTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB60CD82AA59FA300600B0D /* VisionInteractionTestApp.swift */; };
-		2CB60CDD2AA59FA300600B0D /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB60CDC2AA59FA300600B0D /* ImmersiveView.swift */; };
 		2CB60CDF2AA59FA500600B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB60CDE2AA59FA500600B0D /* Assets.xcassets */; };
 		2CB60CE22AA59FA500600B0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB60CE12AA59FA500600B0D /* Preview Assets.xcassets */; };
+		2CBA5B042AA5E10F009620AC /* ImmersiveFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 2CBA5B032AA5E10F009620AC /* ImmersiveFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C0FF9222AA5D45900461676 /* VisionInteractionTestLibrary */ = {isa = PBXFileReference; lastKnownFileType = text; name = VisionInteractionTestLibrary; path = Packages/VisionInteractionTestLibrary; sourceTree = SOURCE_ROOT; };
 		2CB60CD12AA59FA200600B0D /* VisionInteractionTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionInteractionTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB60CD82AA59FA300600B0D /* VisionInteractionTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionInteractionTestApp.swift; sourceTree = "<group>"; };
-		2CB60CDC2AA59FA300600B0D /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		2CB60CDE2AA59FA500600B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB60CE12AA59FA500600B0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CB60CE32AA59FA500600B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6C77E42AA5DB4F00FF7F21 /* Store in Frameworks */,
+				2CBA5B042AA5E10F009620AC /* ImmersiveFeature in Frameworks */,
 				2C6C77E22AA5DB4F00FF7F21 /* MainFeature in Frameworks */,
 				2CB60CD72AA59FA300600B0D /* RealityKitContent in Frameworks */,
 			);
@@ -69,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				2CB60CD82AA59FA300600B0D /* VisionInteractionTestApp.swift */,
-				2CB60CDC2AA59FA300600B0D /* ImmersiveView.swift */,
 				2CB60CDE2AA59FA500600B0D /* Assets.xcassets */,
 				2CB60CE32AA59FA500600B0D /* Info.plist */,
 				2CB60CE02AA59FA500600B0D /* Preview Content */,
@@ -113,6 +112,7 @@
 				2CB60CD62AA59FA300600B0D /* RealityKitContent */,
 				2C6C77E12AA5DB4F00FF7F21 /* MainFeature */,
 				2C6C77E32AA5DB4F00FF7F21 /* Store */,
+				2CBA5B032AA5E10F009620AC /* ImmersiveFeature */,
 			);
 			productName = VisionInteractionTest;
 			productReference = 2CB60CD12AA59FA200600B0D /* VisionInteractionTest.app */;
@@ -171,7 +171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB60CD92AA59FA300600B0D /* VisionInteractionTestApp.swift in Sources */,
-				2CB60CDD2AA59FA300600B0D /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +383,10 @@
 		2CB60CD62AA59FA300600B0D /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		2CBA5B032AA5E10F009620AC /* ImmersiveFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImmersiveFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
