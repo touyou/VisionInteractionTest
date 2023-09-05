@@ -10,14 +10,15 @@ import RealityKit
 import RealityKitContent
 
 public struct ImmersiveView: View {
-    public init() {}
+    @StateObject private var state: ImmersiveViewState
+    
+    public init() {
+        self._state = .init(wrappedValue: .init())
+    }
     
     public var body: some View {
         RealityView { content in
-            // Add the initial RealityKit content
-            if let scene = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
-                content.add(scene)
-            }
+            await state.addScene(named: "Immersive", for: &content)
         }
     }
 }
