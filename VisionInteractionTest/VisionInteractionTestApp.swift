@@ -8,13 +8,17 @@
 import SwiftUI
 import MainFeature
 import ImmersiveFeature
+import Store
 
 @main
 struct VisionInteractionTestApp: App {
+    @StateObject var store = MainStore()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
         }
+        .environmentObject(store)
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()

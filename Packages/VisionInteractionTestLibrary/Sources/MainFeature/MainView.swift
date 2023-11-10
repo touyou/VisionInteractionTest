@@ -8,38 +8,26 @@
 import SwiftUI
 import RealityKit
 import RealityKitContent
+import Store
+import ImmersiveFeature
 
 public struct MainView: View {
     @StateObject private var state: MainViewState
     
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @EnvironmentObject private var store: MainStore
     
     public init() {
         self._state = .init(wrappedValue: .init())
     }
 
     public var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            Toggle("Show Immersive Space", isOn: $state.showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
+        TabView {
+            DefaultView()
+                .tabItem {
+                    Label("Default", systemImage: "house")
+                }
         }
-        .padding()
-        .onChange(of: state.showImmersiveSpace) { _, newValue in
-            Task {
-                await state.onChange(
-                    newValue: newValue,
-                    openImmersiveSpace: openImmersiveSpace,
-                    dismissImmersiveSpace: dismissImmersiveSpace
-                )
-            }
-        }
+        .tabViewStyle(DefaultTabViewStyle())
     }
 }
 

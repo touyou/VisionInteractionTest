@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "MainFeature", dependencies: ["RealityKitContent"]),
+        .target(name: "MainFeature", dependencies: ["RealityKitContent", "ImmersiveFeature", "Store"]),
         .target(name: "ImmersiveFeature", dependencies: ["RealityKitContent"]),
         .target(name: "Store"),
         .target(name: "RealityKitContent", dependencies: []),
